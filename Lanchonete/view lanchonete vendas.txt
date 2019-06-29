@@ -1,0 +1,3 @@
+select venda_id as 'Venda', venda.data as 'Data da Venda', nome as 'Produto', preco as 'Preço', count(produto_id) as 'Quantidade', total as 'Total da Venda' from venda_produto 
+inner join produto on (venda_produto.produto_id = produto.ID) 
+inner join venda on (venda_produto.venda_id = venda.id) group by produto_id

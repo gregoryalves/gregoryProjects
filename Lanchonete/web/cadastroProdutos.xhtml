@@ -1,0 +1,48 @@
+<ui:composition template="./template.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="ondeAbreOutrasTelas">
+        <h:form enctype="multipart/form-data">
+            <div id="vendas" style="padding-left: 15px; padding-top: 15px;">
+                <h:outputLabel for="nome" value="Nome: "/><br/>
+                <h:inputText id="nome" value="#{produtoView.produto.nome}" required="true" requiredMessage="Campo Obrigatório!"/><br/>
+                <h:outputLabel for="nome" value="Preço: "/><br/>
+                <h:inputText id="preco" value="#{produtoView.produto.preco}" required="true"/><br/>
+                <h:outputLabel for="estoque" value="Estoque: "/><br/>
+                <h:inputText id="estoque" value="#{produtoView.produto.estoque}" required="true"/><br/><br/>
+                <h:commandButton value="Salvar" actionListener="#{produtoView.salvar()}"/><br/><br/>
+            </div>
+            <div style="height: 200px; overflow-y: scroll; padding-left: 15px; padding-top: 15px;">
+                <h:dataTable value="#{produtoView.produtos}" var="prod">
+                    <h:column>
+                        <f:facet name="header">Nome</f:facet>
+                        <h:inputText id="nomealtera" value="#{prod.nome}"/>
+
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Preço</f:facet> 
+                        <h:inputText id="precoaltera" value="#{prod.preco}"/>
+
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Estoque</f:facet>
+                        <h:inputText id="estoquealtera" value="#{prod.estoque}"/>
+
+                    </h:column>                    
+                    <h:column>
+                        <f:facet name="header">Ações</f:facet>
+                        <h:commandButton value="Alterar" actionListener="#{produtoView.alterar(prod)}"/>
+                        <h:commandButton value="Excluir" actionListener="#{produtoView.excluir(prod)}" />
+                    </h:column>
+                </h:dataTable><br/>
+                <h:outputText style="color: #dc3545" value="Não será possível excluir itens que já possuem vendas!"/>
+            </div>
+            <br/><br/>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
