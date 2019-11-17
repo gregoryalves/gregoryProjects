@@ -1,0 +1,47 @@
+<ui:composition template="./template.xhtml" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="ondeAbreOutrasTelas">
+        <div id="tabelaVenda" style="text-align: center;">        
+            <h:form>
+                <div style="height: 200px; overflow-y: scroll; padding-left: 15px; padding-top: 15px;">
+                    <h:dataTable value="#{produtoView.produtos}" var="prod">                        
+                        <h:column>
+                            <f:facet name="header">Produto:</f:facet>
+                            <h:outputLabel value="#{prod.nome}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Quantidade Disponível:</f:facet>
+                            <h:outputLabel value="#{prod.estoque}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Quantidade no Carrinho:</f:facet>
+                            <h:outputLabel value="#{prod.carrinho}"/>
+                        </h:column>                        
+                        <h:column>
+                            <f:facet name="header">Valor:</f:facet>
+                            <h:outputLabel value="R$ #{prod.preco}"/>
+                        </h:column>                        
+                        <h:column>
+                            <f:facet name="header"></f:facet>
+                            <h:commandButton id="produtoSoma" value="+" class="tamanhoNome" actionListener="#{vendaView.somaTotal(prod.preco, prod)}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header"></f:facet>
+                            <h:commandButton id="produtoTira" value="Limpar Carrinho" class="tamanhoNome" actionListener="#{vendaView.diminuiTotal(prod.preco, prod)}"/>
+                        </h:column>                        
+                    </h:dataTable>
+                </div>
+                <div id="botaoVender" style="font-size: 25px;">
+                    <h:outputLabel value="Total da venda: "/>
+                    <h:outputText value=" R$ #{vendaView.venda.total}"/><br/>
+                    <h:commandButton class="btn btn-primary" value="Vender" action="#{vendaView.finalizaVenda(produtoView.produtos)}" onclick="return confirm('Concluir Venda?');"/>
+                </div>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:composition>
+
