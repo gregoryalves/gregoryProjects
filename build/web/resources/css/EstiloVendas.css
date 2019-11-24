@@ -1,0 +1,25 @@
+.tamanhoNome {
+    font-size: 25px;
+}
+
+.corpo {
+    text-align: center;
+    margin-top: 3%;
+    font-size: 20px;
+    background-color: #b9bbbe;
+    padding-bottom: 1%;
+    border-style: solid;
+    border-width: 1px;
+
+}
+
+.logar {
+    text-align: center;
+    margin-top: 1%;
+}
+
+.erroExclusao{
+    color: #c82333;
+}
+
+
