@@ -15,8 +15,8 @@ pipeline {
 	}
 	stage('Executar') {
 		steps {
-			sh 'docker container create --publish 8081:8080 trabalho-sidnei-'
-			sh 'docker container run -d --name trabalho-sidnei --publish 8081:8080 trabalho-sidnei/tomcat'
+			sh 'docker container create --publish 8081:8080 --name trabalho-sidnei'
+			sh 'docker container run -it --publish 8081:8080 trabalho-sidnei/tomcat'
 		}
 	}
 	stage('Remover Workspace') {
