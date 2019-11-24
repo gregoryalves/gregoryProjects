@@ -15,6 +15,7 @@ pipeline {
 	}
 	stage('Executar') {
 		steps {
+			sh 'docker container create --publish 8081:8080 trabalho-sidnei-'
 			sh 'docker container run -d --name trabalho-sidnei --publish 8081:8080 trabalho-sidnei/tomcat'
 		}
 	}
