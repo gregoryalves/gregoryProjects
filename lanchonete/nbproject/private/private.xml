@@ -3,12 +3,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Greg/Documents/GitHub/gregoryProjects/lanchonete/src/conf/persistence.xml</file>
+            <file>file:/C:/Users/Greg/Documents/GitHub/gregoryProjects/lanchonete/src/java/repository/Repository.java</file>
+            <file>file:/C:/Users/Greg/Documents/GitHub/gregoryProjects/lanchonete/src/java/repository/PessoaDao.java</file>
+            <file>file:/C:/Users/Greg/Documents/GitHub/gregoryProjects/lanchonete/src/java/repository/ProdutoDao.java</file>
             <file>file:/C:/Users/Greg/Documents/GitHub/gregoryProjects/lanchonete/src/java/model/Pessoa.java</file>
-            <file>file:/C:/Users/Greg/Documents/GitHub/gregoryProjects/lanchonete/web/vendas.xhtml</file>
-            <file>file:/C:/Users/Greg/Documents/GitHub/gregoryProjects/lanchonete/web/vendaErro.xhtml</file>
+            <file>file:/C:/Users/Greg/Documents/GitHub/gregoryProjects/lanchonete/src/java/model/Produto.java</file>
             <file>file:/C:/Users/Greg/Documents/GitHub/gregoryProjects/lanchonete/src/java/test/LoginTest.java</file>
             <file>file:/C:/Users/Greg/Documents/GitHub/gregoryProjects/lanchonete/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/Greg/Documents/GitHub/gregoryProjects/lanchonete/web/vendaFinished.xhtml</file>
         </group>
     </open-files>
 </project-private>
