@@ -3,7 +3,7 @@ pipeline {
  stages {
 	stage('Build Imagem Docker! ') {
 		steps {
-			sh 'cp /var/lib/jenkins/workspace/trabalho-sidnei_master/dist/Lanchonete.war /home/lucasjansen/docker/'
+			sh 'cp /var/lib/jenkins/workspace/gregoryProjects/dist/Lanchonete.war /home/lucasjansen/docker/'
 			sh 'docker image build -t trabalho-sidnei/tomcat /home/lucasjansen/docker/'
 		}
 	}
