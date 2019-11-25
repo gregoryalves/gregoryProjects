@@ -15,7 +15,7 @@ pipeline {
 	}*/
 	stage('Executar') {
 		steps {
-			sh 'docker container run -d --name trabalho-sidnei --publish 8081:8080 Lanchonete'
+			sh 'docker container run -d --name trabalho-sidnei --publish 8081:8080 lanchonete'
 		}
 	}
 	stage('Remover Workspace') {
