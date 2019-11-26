@@ -6,7 +6,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import model.Produto;
 import model.Venda;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2019-11-25T01:06:06")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2019-11-25T22:42:42")
 @StaticMetamodel(VendaProduto.class)
 public class VendaProduto_ { 
 

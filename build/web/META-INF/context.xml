@@ -1,4 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/Lanchonete">
-  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="LanchonetePU" password="f7c9935339fea37" type="javax.sql.DataSource" url="jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/heroku_bda16118a5482b1?reconnect=true:3306/heroku_bda16118a5482b1?zeroDateTimeBehavior=convertToNull" username="bacf406b54e8ea"/>
-</Context>
+<Context antiJARLocking="true" path="/Lanchonete"/>
